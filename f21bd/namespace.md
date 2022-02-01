@@ -7,7 +7,7 @@
 **Object Properties:**  
   
 **Data Properties:**  
-***
+
 ## Classes
 ### SF01
 **Label:** Person  
@@ -17,7 +17,7 @@
 **Subclass:**  
 **Disjoint with:**  
 **Identifiers:**  
-***
+
 ### SF02
 **Label:** Place  
 **Description:** a particular position, point, or area in space; a location.    
@@ -26,7 +26,7 @@
 **Subclass:**  
 **Disjoint with:**  
 **Identifiers:**  
-***
+
 ### SF03
 **Label:** Organization  
 **Description:** an organized group of people with a particular purpose.    
@@ -35,4 +35,3 @@
 **Subclass:**  
 **Disjoint with:**  
 **Identifiers:**  
-***
