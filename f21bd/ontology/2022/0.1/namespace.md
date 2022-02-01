@@ -1,12 +1,11 @@
 # Tour Ontology Namespace  
 
-## Term Summary  
+## Index of Terms  
 
-**Classes:** [Person](#sf01) | [Place](#sf02) | [Organization](#sf03)  
-  
-**Object Properties:**  
-  
-**Data Properties:**  
+| **Classes:** |[Person](#sf01), [Place](#sf02), [Organization](#sf03)|  
+| :------------|:----------------------------------------------------:|  
+| **Object Properties:** |--------------------------------------------| 
+| **Data Properties:**   |--------------------------------------------| 
 
 ___  
 
@@ -17,7 +16,7 @@ ___
 **Properties:** 
 **Instance of:**   
 **Subclass:**  
-**Disjoint with:**  
+**Disjoint with:** [Place](#sf02)  
 **Identifiers:**  
 
 ___  
@@ -28,7 +27,7 @@ ___
 **Properties:**  
 **Instance of:**  
 **Subclass:**  
-**Disjoint with:**  
+**Disjoint with:** [Organization](#sf03)  
 **Identifiers:**  
 
 ___  
@@ -39,10 +38,21 @@ ___
 **Properties:**  
 **Instance of:**  
 **Subclass:**  
-**Disjoint with:**  
+**Disjoint with:** [Place](#sf02)  
 **Identifiers:**  
 
-___
+___  
+
+### SF03
+**Label:** Business  
+**Description:** an organized group of people with a particular purpose.    
+**Properties:**  
+**Instance of:**  
+**Subclass:**  
+**Disjoint with:** [Place](#sf02)  
+**Identifiers:**  
+
+___  
 
 ## Properties  
   
