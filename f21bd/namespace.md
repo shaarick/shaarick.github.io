@@ -2,12 +2,14 @@
 
 ## Term Summary  
 
-**Classes:** [Person](#sf01) | [Place](#place) | [Organization](#organization)  
+**Classes:** [Person](#sf01) | [Place](#sf02) | [Organization](#sf03)  
   
 **Object Properties:**  
   
 **Data Properties:**  
-***
+
+___  
+
 ## Classes
 ### SF01
 **Label:** Person  
@@ -17,7 +19,9 @@
 **Subclass:**  
 **Disjoint with:**  
 **Identifiers:**  
-***
+
+___  
+
 ### SF02
 **Label:** Place  
 **Description:** a particular position, point, or area in space; a location.    
@@ -26,7 +30,9 @@
 **Subclass:**  
 **Disjoint with:**  
 **Identifiers:**  
-***
+
+___  
+
 ### SF03
 **Label:** Organization  
 **Description:** an organized group of people with a particular purpose.    
@@ -35,4 +41,9 @@
 **Subclass:**  
 **Disjoint with:**  
 **Identifiers:**  
-***
+
+___
+
+## Properties  
+  
+___  
