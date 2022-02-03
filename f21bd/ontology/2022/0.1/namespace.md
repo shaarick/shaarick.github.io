@@ -15,15 +15,15 @@ ___
 **Description:** a human being.   
 **Subclass Of:**  
 **Disjoint with:** [Place](#sf02), [Tour](#sf0701), [Activity](#sf07), [Organization](#sf03)  
-**Identifiers:**  [FIBO: Person](https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person)
+**Identifiers:**  [FIBO: Person](https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person)  
 
 ___  
 
 ### SF02
 **Label:** Place  
-**Description:** a particular position, point, or area in space; a location.      
+**Description:** a particular position, point, or area in space; a location.  
 **Subclass Of:**  
-**Disjoint with:** [Organization](#sf03), [Person](#sf01),[Tour](#sf0701), [Activity](#sf07)   
+**Disjoint with:** [Organization](#sf03), [Person](#sf01),[Tour](#sf0701), [Activity](#sf07)  
 **Identifiers:**  
 
 ___  
@@ -31,10 +31,9 @@ ___
 ### SF024
 **Label:** City  
 **Description:** a place where people live that is larger or more important than a town.  
-**Subclass Of:**  [Place](#sf02)
+**Subclass Of:**  [Place](#sf02)  
 **Disjoint with:**  
-**Equivalent To:** [City](#sf024) *and* [hasCountry](#sf042) **exactly** 1 [Country](#sf023),  
-   [City](#sf024) *and* [hasContinent](#sf041) **exactly** 1 [Continent](#sf022)  
+**Equivalent To:** [City](#sf024) *and* [hasCountry](#sf042) **exactly** 1 [Country](#sf023), [City](#sf024) *and* [hasContinent](#sf041) **exactly** 1 [Continent](#sf022)  
 **Identifiers:**  
 
 ___  
@@ -42,7 +41,7 @@ ___
 ### SF023
 **Label:** Country  
 **Description:** a nation with its own government, occupying a particular territory.    
-**Subclass Of:**  [Place](#sf02)
+**Subclass Of:**  [Place](#sf02)  
 **Disjoint with:**  
 **Equivalent To:** [Country](#sf023) *and* [hasContinent](#sf041) **exactly** 1 [Continent](#sf022)  
 **Identifiers:** [OMG: Country](https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Country)  
@@ -52,7 +51,7 @@ ___
 ### SF022
 **Label:** Continent  
 **Description:** any of the world's main continuous expanses of land.     
-**Subclass Of:**  [Place](#sf02)
+**Subclass Of:**  [Place](#sf02)  
 **Disjoint with:**  
 **Equivalent To:** {Asia , Africa , Europe , 'North America' , 'South America' , Antarctica , Australia}  
 **Identifiers:**  
@@ -89,7 +88,7 @@ ___
 ### SF0701
 **Label:** Tour  
 **Description:** a journey for pleasure in which several different places are visited.  
-**Subclass Of:**  [Activity](#sf07)
+**Subclass Of:**  [Activity](#sf07)  
 **Disjoint with:** [Place](#sf02), [Organization](#sf03), [Person](#sf01)  
 **Equivalent To:** [Tour](sf0701) *and* [hasPlansToVisit](#sf04011) **min** 2 [City](#sf024)  
 **Identifiers:**  
@@ -108,8 +107,8 @@ ___
 ___  
 
 ### SF043
-**Label:** hasCity
-**Description:** City belonging to the country or continent in question
+**Label:** hasCity  
+**Description:** City belonging to the country or continent in question.  
 **Characteristics:** Asymmetric  
 **Domain:** [Country](#sf023) *or* [Continent](#sf022)  
 **Range:** [City](#sf024)  
@@ -118,8 +117,8 @@ ___
 ___  
 
 ### SF041
-**Label:** hasContinent
-**Description:** continent for the city or country in question.
+**Label:** hasContinent  
+**Description:** continent for the city or country in question.  
 **Characteristics:** Asymmetric  
 **Domain:** [City](#sf024) *or* [Country](#sf023)  
 **Range:** [Continent](#sf022)  
@@ -128,8 +127,8 @@ ___
 ___  
 
 ### SF042
-**Label:** hasCountry
-**Description:** 
+**Label:** hasCountry  
+**Description:**  
 **Characteristics:** Asymmetric  
 **Domain:** [City](#sf024) *or* [Continent](#sf022)  
 **Range:** [Country](#sf023)  
@@ -138,7 +137,7 @@ ___
 ___  
 
 ### SF04011
-**Label:** hasPlansToVisit
+**Label:** hasPlansToVisit  
 **Description:** place that a Tour plans on visiting.  
 **Characteristics:** Asymmetric, Irreflexive    
 **Domain:** [Tour](#sf0701)  
@@ -148,7 +147,7 @@ ___
 ___  
 
 ### SF046
-**Label:** hasProvider
+**Label:** hasProvider  
 **Description:** Tour Provider. Assuming tour packages are unique.  
 **Characteristics:** Functional, Inverse Functional, Asymmetric, Irreflexive    
 **Domain:** [Tour](#sf0701)  
@@ -158,7 +157,7 @@ ___
 ___  
 
 ### SF044
-**Label:** hasTour
+**Label:** hasTour  
 **Description:** (Inverse) Functional property because seems reasonable to assume each provider will have slightly different tour package.   
 **Characteristics:** Functional, Inverse Functional, Asymmetric, Irreflexive    
 **Domain:** [Business Entity](#sf031)    
@@ -167,3 +166,92 @@ ___
 
 ___  
 
+### SF051
+**Label:** hasName  
+**Description:** name of the entity.   
+**SubProperty Of:**  
+**Characteristics:**   
+**Domain:**  
+**Range:**   
+
+___  
+
+### SF0515
+**Label:** hasBusinessName  
+**Description:** name of the business entity.   
+**SubProperty Of:**  [hasName](#sf051)  
+**Characteristics:**   
+**Domain:** [Business Entity](#sf031)  
+**Range:**   
+
+___  
+
+### SF0512
+**Label:** hasCityName  
+**Description:** name of the city.   
+**SubProperty Of:**  [hasName](#sf051)  
+**Characteristics:** Functional  
+**Domain:** [City](#sf024)    
+**Range:**   
+
+___  
+
+### SF0513
+**Label:** hasContinentName  
+**Description:** name of the continent.   
+**SubProperty Of:**  [hasName](#sf051)  
+**Characteristics:** Functional  
+**Domain:** [Continent](#sf022)    
+**Range:**   
+
+___  
+
+### SF0512
+**Label:** hasCountryName  
+**Description:** name of the city.   
+**SubProperty Of:**  [hasName](#sf051)  
+**Characteristics:** Functional  
+**Domain:** [City](#sf024)    
+**Range:**   
+
+___  
+
+### SF0511
+**Label:** hasTourName  
+**Description:** name of the tour package.   
+**SubProperty Of:**  [hasName](#sf051)  
+**Characteristics:** Functional  
+**Domain:** [Tour](#sf0701)    
+**Range:**   
+
+___  
+
+### SF053
+**Label:** hasTourDescription   
+**Description:** description of a particular tour package.     
+**SubProperty Of:**    
+**Characteristics:** Functional  
+**Domain:** [Tour](#sf0701)      
+**Range:** *xsd:string*    
+
+___  
+
+### SF0521
+**Label:** hasTourDurationInDays  
+**Description:** number of days the tour will last.    
+**SubProperty Of:**   
+**Characteristics:**    
+**Domain:** [Tour](#sf0701)      
+**Range:** *xsd:int*    
+
+___  
+
+### SF054
+**Label:** hasWikiDataEntry  
+**Description:** WikiData entry (url) for a thing.   
+**SubProperty Of:**    
+**Characteristics:**   
+**Domain:**    
+**Range:**   
+
+___  
