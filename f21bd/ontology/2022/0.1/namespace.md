@@ -3,9 +3,9 @@
 ## Index of Terms  
 
 | **Classes:** |[Person](#sf01), [Place](#sf02), [Organization](#sf03), [Activity](#sf07), [Tour](#sf0701), [Business Entity](#sf031), [City](#sf024), [Continent](#sf022), [Country](#sf023)|  
-| :------------|:----------------------------------------------------:|  
-| **Object Properties:** |--------------------------------------------| 
-| **Data Properties:**   |--------------------------------------------| 
+| :------------|:----------------------------------------------------|  
+| **Object Properties:** |[hasCapital](#sf045), [hasCity](#sf043), [hasContinent](#sf041), [hasCountry](#sf042), [hasPlansToVisit](#sf04011), [hasProvider](#sf046), [hasTour](#sf044)| 
+| **Data Properties:** |[hasName](#sf051), [hasTourDescription](#sf053), [hasTourDurationInDays](#sf0521), [hasWikiDataEntry](#sf054)| 
 
 ___  
 
@@ -97,5 +97,73 @@ ___
 ___  
 
 ## Properties  
-  
+### SF045
+**Label:** hasCapital  
+**Description:** Capital city of the subject Country.  
+**Characteristics:** Functional, Inverse Functional, Asymmetric, Irreflexive  
+**Domain:** [Country](#sf023)  
+**Range:** [City](#sf024)  
+**Inverse Of:**   
+
 ___  
+
+### SF043
+**Label:** hasCity
+**Description:** City belonging to the country or continent in question
+**Characteristics:** Asymmetric  
+**Domain:** [Country](#sf023) *or* [Continent](#sf022)  
+**Range:** [City](#sf024)  
+**Inverse Of:**  
+
+___  
+
+### SF041
+**Label:** hasContinent
+**Description:** continent for the city or country in question.
+**Characteristics:** Asymmetric  
+**Domain:** [City](#sf024) *or* [Country](#sf023)  
+**Range:** [Continent](#sf022)  
+**Inverse Of:**  
+
+___  
+
+### SF042
+**Label:** hasCountry
+**Description:** 
+**Characteristics:** Asymmetric  
+**Domain:** [City](#sf024) *or* [Continent](#sf022)  
+**Range:** [Country](#sf023)  
+**Inverse Of:**  
+
+___  
+
+### SF04011
+**Label:** hasPlansToVisit
+**Description:** place that a Tour plans on visiting.  
+**Characteristics:** Asymmetric, Irreflexive    
+**Domain:** [Tour](#sf0701)  
+**Range:** [City](#sf024)  
+**Inverse Of:**  
+
+___  
+
+### SF046
+**Label:** hasProvider
+**Description:** Tour Provider. Assuming tour packages are unique.  
+**Characteristics:** Functional, Inverse Functional, Asymmetric, Irreflexive    
+**Domain:** [Tour](#sf0701)  
+**Range:** [Business Entity](#sf031)  
+**Inverse Of:**  [hasTour](#sf044)  
+
+___  
+
+### SF044
+**Label:** hasTour
+**Description:** (Inverse) Functional property because seems reasonable to assume each provider will have slightly different tour package.   
+**Characteristics:** Functional, Inverse Functional, Asymmetric, Irreflexive    
+**Domain:** [Business Entity](#sf031)    
+**Range:** [Tour](#sf0701)  
+**Inverse Of:**  [hasProvider](#sf046)  
+
+___  
+
